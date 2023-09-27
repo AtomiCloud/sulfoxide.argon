@@ -1,6 +1,6 @@
-# Sulfoxide Carbon
+# Sulfoxide Argon
 
-App of Apps Helm Chart that's the bootstrap engine for AtomiCloud's clusters
+Helm chart to deploy AtomiCloud's Cluster policy engine, Kyverno
 
 ## Prerequisites
 - nix
