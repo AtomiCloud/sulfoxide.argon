@@ -2,7 +2,7 @@ apiVersion: v2
 name: atomi-kyverno
 description: AtomiCloud's Wrapper chart to deploy Kyverno
 type: application
-version: 1.0.0
+version: 1.0.1
 appVersion: "2.7.5"
 dependencies:
   - name: kyverno
