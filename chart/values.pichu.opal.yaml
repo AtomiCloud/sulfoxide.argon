@@ -1,0 +1,53 @@
+serviceTree:
+  landscape: pichu
+  platform: systems
+  service: policy-engine
+  module: operator
+  cluster: opal
+  layer: "1"
+
+kyverno:
+  resources:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  podAnnotations:
+    atomi.cloud/landscape: pichu
+    atomi.cloud/cluster: opal
+  customLabels:
+    atomi.cloud/landscape: pichu
+    atomi.cloud/cluster: opal
+  replicaCount: 1
+
+policy-reporter:
+  resources:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  podLabels:
+    atomi.cloud/landscape: pichu
+    atomi.cloud/cluster: opal
+  podAnnotations:
+    atomi.cloud/landscape: pichu
+    atomi.cloud/cluster: opal
+  ui:
+    enabled: true
+    resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    podLabels:
+      atomi.cloud/landscape: pichu
+      atomi.cloud/cluster: opal
+    podAnnotations:
+      atomi.cloud/landscape: pichu
+      atomi.cloud/cluster: opal

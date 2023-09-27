@@ -1,0 +1,100 @@
+serviceTree:
+  landscape: pichu
+  platform: systems
+  service: policy-engine
+  module: operator
+  cluster: opal
+  layer: "1"
+
+kyverno:
+  templating:
+    enabled: false
+  topologySpreadConstraints:
+    - maxSkew: 1
+      topologyKey: "topology.kubernetes.io/zone"
+      whenUnsatisfiable: ScheduleAnyway
+      labelSelector:
+        matchLabels:
+          atomi.cloud/service: policy-engine
+          atomi.cloud/module: operator
+  resources:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  podAnnotations:
+    atomi.cloud/landscape: pichu
+    atomi.cloud/platform: systems
+    atomi.cloud/service: policy-engine
+    atomi.cloud/module: operator
+    atomi.cloud/layer: "1"
+  customLabels:
+    atomi.cloud/landscape: pichu
+    atomi.cloud/platform: systems
+    atomi.cloud/service: policy-engine
+    atomi.cloud/module: operator
+    atomi.cloud/layer: "1"
+  replicaCount: 3
+  config:
+    webhooks:
+      - namespaceSelector:
+          matchExpressions:
+            - key: kubernetes.io/metadata.name
+              operator: NotIn
+              values:
+                - kube-system
+                - kube-node-lease
+                - kube-public
+                - kyverno
+
+policy-reporter:
+  topologySpreadConstraints:
+    - maxSkew: 1
+      topologyKey: "topology.kubernetes.io/zone"
+      whenUnsatisfiable: ScheduleAnyway
+      labelSelector:
+        matchLabels:
+          atomi.cloud/service: policy-engine
+          atomi.cloud/module: reporter
+  resources:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  podLabels:
+    atomi.cloud/landscape: pichu
+    atomi.cloud/platform: systems
+    atomi.cloud/service: policy-engine
+    atomi.cloud/module: reporter
+    atomi.cloud/layer: "1"
+  podAnnotations:
+    atomi.cloud/landscape: pichu
+    atomi.cloud/platform: systems
+    atomi.cloud/service: policy-engine
+    atomi.cloud/module: reporter
+    atomi.cloud/layer: "1"
+  ui:
+    resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    enabled: true
+    podLabels:
+      atomi.cloud/landscape: pichu
+      atomi.cloud/platform: systems
+      atomi.cloud/service: policy-engine
+      atomi.cloud/module: ui
+      atomi.cloud/layer: "1"
+    podAnnotations:
+      atomi.cloud/landscape: pichu
+      atomi.cloud/platform: systems
+      atomi.cloud/service: policy-engine
+      atomi.cloud/module: ui
+      atomi.cloud/layer: "1"
