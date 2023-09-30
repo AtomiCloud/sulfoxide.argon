@@ -1,3 +1,15 @@
+## [1.1.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.0.1...v1.1.0) (2023-09-30)
+
+
+### 🚀 New Features
+
+* values.yaml example ([dbe8553](https://github.com/AtomiCloud/sulfoxide.argon/commit/dbe8553b194fe1d4299434fb221f81de2242466e))
+
+
+### 🐛 Bug Fixes
+
+* migrate to sulfoxide-argon for Chart.yaml and Taskfile.yaml ([4afcafa](https://github.com/AtomiCloud/sulfoxide.argon/commit/4afcafa09a012f918a78ea038c49c8581e2010db))
+
 ## [1.0.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.0.0...v1.0.1) (2023-09-27)
 
 
