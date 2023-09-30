@@ -1,12 +1,18 @@
+# -- AtomiCloud Service Tree. See [ServiceTree](https://atomicloud.larksuite.com/wiki/OkfJwTXGFiMJkrk6W3RuwRrZs64?theme=DARK&contentTheme=DARK#MHw5d76uDo2tBLx86cduFQMRsBb)
 serviceTree:
-  landscape: pichu
-  platform: systems
-  service: policy-engine
-  module: operator
-  cluster: opal
-  layer: "1"
+  platform: &platform sulfoxide
+  service: &service argon
+  layer: &layer "1"
 
+# -- Kubernetes labels and annotations, following Service Tree
+tags: &tags
+  atomi.cloud/platform: *platform
+  atomi.cloud/service: *service
+  atomi.cloud/layer: *layer
+
+# -- Kyverno Configuration. See [Kyverno](https://github.com/kyverno/kyverno/tree/main/charts/kyverno)
 kyverno:
+  replicaCount: 3
   templating:
     enabled: false
   topologySpreadConstraints:
@@ -15,7 +21,7 @@ kyverno:
       whenUnsatisfiable: ScheduleAnyway
       labelSelector:
         matchLabels:
-          atomi.cloud/service: policy-engine
+          <<: *tags
           atomi.cloud/module: operator
   resources:
     limits:
@@ -25,18 +31,11 @@ kyverno:
       cpu: 100m
       memory: 128Mi
   podAnnotations:
-    atomi.cloud/landscape: pichu
-    atomi.cloud/platform: systems
-    atomi.cloud/service: policy-engine
+    <<: *tags
     atomi.cloud/module: operator
-    atomi.cloud/layer: "1"
   customLabels:
-    atomi.cloud/landscape: pichu
-    atomi.cloud/platform: systems
-    atomi.cloud/service: policy-engine
+    <<: *tags
     atomi.cloud/module: operator
-    atomi.cloud/layer: "1"
-  replicaCount: 3
   config:
     webhooks:
       - namespaceSelector:
@@ -48,7 +47,7 @@ kyverno:
                 - kube-node-lease
                 - kube-public
                 - kyverno
-
+# -- Kyverno Policy Reporter Configuration. See [Policy Reporter](https://github.com/kyverno/policy-reporter)
 policy-reporter:
   topologySpreadConstraints:
     - maxSkew: 1
@@ -56,7 +55,7 @@ policy-reporter:
       whenUnsatisfiable: ScheduleAnyway
       labelSelector:
         matchLabels:
-          atomi.cloud/service: policy-engine
+          <<: *tags
           atomi.cloud/module: reporter
   resources:
     limits:
@@ -66,18 +65,13 @@ policy-reporter:
       cpu: 100m
       memory: 128Mi
   podLabels:
-    atomi.cloud/landscape: pichu
-    atomi.cloud/platform: systems
-    atomi.cloud/service: policy-engine
+    <<: *tags
     atomi.cloud/module: reporter
-    atomi.cloud/layer: "1"
   podAnnotations:
-    atomi.cloud/landscape: pichu
-    atomi.cloud/platform: systems
-    atomi.cloud/service: policy-engine
+    <<: *tags
     atomi.cloud/module: reporter
-    atomi.cloud/layer: "1"
   ui:
+    enabled: true
     resources:
       limits:
         cpu: 1
@@ -85,16 +79,9 @@ policy-reporter:
       requests:
         cpu: 100m
         memory: 128Mi
-    enabled: true
     podLabels:
-      atomi.cloud/landscape: pichu
-      atomi.cloud/platform: systems
-      atomi.cloud/service: policy-engine
+      <<: *tags
       atomi.cloud/module: ui
-      atomi.cloud/layer: "1"
     podAnnotations:
-      atomi.cloud/landscape: pichu
-      atomi.cloud/platform: systems
-      atomi.cloud/service: policy-engine
+      <<: *tags
       atomi.cloud/module: ui
-      atomi.cloud/layer: "1"
