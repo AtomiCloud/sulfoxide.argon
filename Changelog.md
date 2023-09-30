@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.1.0...v1.1.1) (2023-09-30)
+
+
+### 🐛 Bug Fixes
+
+* change cluster render to cluster template ([ad11702](https://github.com/AtomiCloud/sulfoxide.argon/commit/ad11702c91c54f38a97739f1ab55efdb277e305a))
+
 ## [1.1.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.0.1...v1.1.0) (2023-09-30)
 
 
