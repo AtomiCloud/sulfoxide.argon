@@ -1,15 +1,15 @@
-# atomi-kyverno
+# sulfoxide-argon
 
 ![Version: 1.0.1](https://img.shields.io/badge/Version-1.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
 
-AtomiCloud's Wrapper chart to deploy Kyverno
+Helm chart to deploy AtomiCloud's Cluster policy engine, Kyverno
 
 ## Requirements
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://kyverno.github.io/kyverno/ | kyverno | 2.7.5 |
-| https://kyverno.github.io/policy-reporter | policy-reporter | 2.19.4 |
+| https://kyverno.github.io/kyverno/ | kyverno | 3.0.5 |
+| https://kyverno.github.io/policy-reporter | policy-reporter | 2.20.1 |
 
 ## Values
 

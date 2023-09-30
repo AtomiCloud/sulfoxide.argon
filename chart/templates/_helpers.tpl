@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "atomi-kyverno.name" -}}
+{{- define "sulfoxide-argon.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "atomi-kyverno.fullname" -}}
+{{- define "sulfoxide-argon.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,19 +26,19 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "atomi-kyverno.chart" -}}
+{{- define "sulfoxide-argon.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "atomi-kyverno.labels" -}}
-helm.sh/chart: {{ include "atomi-kyverno.chart" . }}
+{{- define "sulfoxide-argon.labels" -}}
+helm.sh/chart: {{ include "sulfoxide-argon.chart" . }}
 {{- range $k, $v := .Values.serviceTree }}
 "atomi.cloud/{{ $k }}": "{{ $v }}"
 {{- end }}
-{{ include "atomi-kyverno.selectorLabels" . }}
+{{ include "sulfoxide-argon.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -48,8 +48,8 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Common annotations
 */}}
-{{- define "atomi-kyverno.annotations" -}}
-helm.sh/chart: {{ include "atomi-kyverno.chart" . }}
+{{- define "sulfoxide-argon.annotations" -}}
+helm.sh/chart: {{ include "sulfoxide-argon.chart" . }}
 {{- range $k, $v := .Values.serviceTree }}
 "atomi.cloud/{{ $k }}": "{{ $v }}"
 {{- end }}
@@ -58,17 +58,17 @@ helm.sh/chart: {{ include "atomi-kyverno.chart" . }}
 {{/*
 Selector labels
 */}}
-{{- define "atomi-kyverno.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "atomi-kyverno.name" . }}
+{{- define "sulfoxide-argon.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "sulfoxide-argon.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "atomi-kyverno.serviceAccountName" -}}
+{{- define "sulfoxide-argon.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "atomi-kyverno.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "sulfoxide-argon.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}

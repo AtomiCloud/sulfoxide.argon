@@ -1,9 +1,10 @@
 version: "3"
 
 env:
-  RELEASE_NAME: kyverno
+  RELEASE_NAME: sulfoxide-argon
 
 includes:
+  util: tasks/Taskfile.util.yaml
   pichu:opal:
     taskfile: tasks/Taskfile.cluster.yaml
     vars:
@@ -28,3 +29,17 @@ tasks:
     dir: chart
     cmds:
       - helm dependency update
+
+  latest:
+    desc: Get the latest version of Kyverno as Policy Engine
+    cmds:
+      - task: util:latest
+        vars:
+          REPO_NAME: kyverno
+          REPO_URL: https://kyverno.github.io/kyverno/
+          CHART_NAME: kyverno
+      - task: util:latest
+        vars:
+          REPO_NAME: policy-reporter
+          REPO_URL: https://kyverno.github.io/policy-reporter
+          CHART_NAME: policy-reporter
