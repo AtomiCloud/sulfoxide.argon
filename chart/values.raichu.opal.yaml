@@ -1,0 +1,57 @@
+serviceTree:
+  landscape: &landscape raichu
+  cluster: &cluster opal
+
+tags: &tags
+  atomi.cloud/landscape: *landscape
+  atomi.cloud/cluster: *cluster
+
+kyverno:
+  replicaCount: 3
+  topologySpreadConstraints:
+    - maxSkew: 1
+      labelSelector:
+        matchLabels:
+          <<: *tags
+  resources:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  podAnnotations:
+    <<: *tags
+  customLabels:
+    <<: *tags
+
+# -- Kyverno Policy Reporter Configuration. See [Policy Reporter](https://github.com/kyverno/policy-reporter)
+policy-reporter:
+  topologySpreadConstraints:
+    - maxSkew: 1
+      labelSelector:
+        matchLabels:
+          <<: *tags
+  resources:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  podLabels:
+    <<: *tags
+  podAnnotations:
+    <<: *tags
+  ui:
+    resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    podLabels:
+      <<: *tags
+    podAnnotations:
+      <<: *tags
