@@ -1,5 +1,5 @@
 serviceTree:
-  landscape: &landscape raichu
+  landscape: &landscape entei
   cluster: &cluster opal
 
 tags: &tags
@@ -10,12 +10,9 @@ kyverno:
   replicaCount: 3
   topologySpreadConstraints:
     - maxSkew: 1
-      topologyKey: "topology.kubernetes.io/zone"
-      whenUnsatisfiable: ScheduleAnyway
       labelSelector:
         matchLabels:
           <<: *tags
-          atomi.cloud/module: operator
   resources:
     limits:
       cpu: 1
