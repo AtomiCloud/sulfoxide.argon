@@ -1,3 +1,11 @@
+## [1.3.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.3.0...v1.3.1) (2023-10-06)
+
+
+### 🐛 Bug Fixes
+
+* topologySpreadConstraints missing parameters ([63a8da6](https://github.com/AtomiCloud/sulfoxide.argon/commit/63a8da6e9e74cbdf82c67e776a86a6d8039f99c7))
+* topologySpreadConstraints missing parameters ([a922feb](https://github.com/AtomiCloud/sulfoxide.argon/commit/a922feb88595c24a6e02be1d620872867e581939))
+
 ## [1.3.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.2.0...v1.3.0) (2023-10-06)
 
 
