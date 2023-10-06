@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.2.0...v1.3.0) (2023-10-06)
+
+
+### 🚀 New Features
+
+* entei values ([0bb9ff4](https://github.com/AtomiCloud/sulfoxide.argon/commit/0bb9ff4669e5230366b464f4d0df09f22f36951f))
+
 ## [1.2.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.1.1...v1.2.0) (2023-10-05)
 
 
