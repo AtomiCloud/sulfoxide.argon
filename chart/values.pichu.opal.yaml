@@ -7,7 +7,7 @@ tags: &tags
   atomi.cloud/cluster: *cluster
 
 kyverno:
-  replicaCount: 3
+  replicaCount: 1
   topologySpreadConstraints:
     - maxSkew: 1
       topologyKey: "topology.kubernetes.io/zone"
@@ -18,11 +18,11 @@ kyverno:
           atomi.cloud/module: operator
   resources:
     limits:
-      cpu: 1
-      memory: 1Gi
+      cpu: 2
+      memory: 2Gi
     requests:
-      cpu: 100m
-      memory: 128Mi
+      cpu: 500m
+      memory: 512Mi
   podAnnotations:
     <<: *tags
   customLabels:
