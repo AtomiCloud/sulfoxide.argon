@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.3.1...v1.4.0) (2023-10-15)
+
+
+### 🚀 New Features
+
+* improve request resource ([37adc5c](https://github.com/AtomiCloud/sulfoxide.argon/commit/37adc5c68a7beac09cb267863b1d5b7d6656e92c))
+
 ## [1.3.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.3.0...v1.3.1) (2023-10-06)
 
 
