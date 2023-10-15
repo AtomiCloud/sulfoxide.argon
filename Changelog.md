@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.4.0...v1.4.1) (2023-10-15)
+
+
+### 🐛 Bug Fixes
+
+* reduce request ([05ff210](https://github.com/AtomiCloud/sulfoxide.argon/commit/05ff2106516686b4c68ad67bcce08e44a27d4711))
+
 ## [1.4.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.3.1...v1.4.0) (2023-10-15)
 
 
