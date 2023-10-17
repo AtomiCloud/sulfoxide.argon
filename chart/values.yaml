@@ -31,8 +31,6 @@ kyverno:
       requests:
         cpu: 100m
         memory: 128Mi
-  metricsConfig:
-    create:
   templating:
     enabled: false
 
