@@ -12,24 +12,30 @@ tags: &tags
 
 # -- Kyverno Configuration. See [Kyverno](https://github.com/kyverno/kyverno/tree/main/charts/kyverno)
 kyverno:
-  replicaCount: 3
+  admissionController:
+    createSelfSignedCert: true
+    replicas: 1
+    podLabels:
+      <<: *tags
+      atomi.cloud/module: operator
+    podAnnotations:
+      <<: *tags
+      atomi.cloud/module: operator
+    serviceMonitor:
+      enabled: true
+      interval: 60s
+    resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+  metricsConfig:
+    create:
   templating:
     enabled: false
-  topologySpreadConstraints:
-    - maxSkew: 1
-      topologyKey: "topology.kubernetes.io/zone"
-      whenUnsatisfiable: ScheduleAnyway
-      labelSelector:
-        matchLabels:
-          <<: *tags
-          atomi.cloud/module: operator
-  resources:
-    limits:
-      cpu: 1
-      memory: 1Gi
-    requests:
-      cpu: 100m
-      memory: 128Mi
+
   podAnnotations:
     <<: *tags
     atomi.cloud/module: operator
