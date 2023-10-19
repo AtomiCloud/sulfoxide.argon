@@ -12,15 +12,51 @@ tags: &tags
 
 # -- Kyverno Configuration. See [Kyverno](https://github.com/kyverno/kyverno/tree/main/charts/kyverno)
 kyverno:
+  backgroundController:
+    replicas: 1
+    serviceMonitor:
+      enabled: true
+      interval: 60s
+    resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
+      requests:
+        cpu: 25m
+        memory: 64Mi
+    podAnnotations:
+      <<: *tags
+      atomi.cloud/module: background-controller
+    podLabels:
+      <<: *tags
+      atomi.cloud/module: background-controller
+  cleanupController:
+    replicas: 1
+    serviceMonitor:
+      enabled: true
+      interval: 60s
+    resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
+      requests:
+        cpu: 25m
+        memory: 64Mi
+    podAnnotations:
+      <<: *tags
+      atomi.cloud/module: cleanup-controller
+    podLabels:
+      <<: *tags
+      atomi.cloud/module: cleanup-controller
   admissionController:
     createSelfSignedCert: true
     replicas: 1
     podLabels:
       <<: *tags
-      atomi.cloud/module: operator
+      atomi.cloud/module: admission-controller
     podAnnotations:
       <<: *tags
-      atomi.cloud/module: operator
+      atomi.cloud/module: admission-controller
     serviceMonitor:
       enabled: true
       interval: 60s
@@ -31,15 +67,24 @@ kyverno:
       requests:
         cpu: 100m
         memory: 128Mi
-  templating:
-    enabled: false
-
-  podAnnotations:
-    <<: *tags
-    atomi.cloud/module: operator
-  customLabels:
-    <<: *tags
-    atomi.cloud/module: operator
+  reportsController:
+    replicas: 1
+    podLabels:
+      <<: *tags
+      atomi.cloud/module: reports-controller
+    podAnnotations:
+      <<: *tags
+      atomi.cloud/module: reports-controller
+    serviceMonitor:
+      enabled: true
+      interval: 60s
+    resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 128Mi
   config:
     webhooks:
       - namespaceSelector:
