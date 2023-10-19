@@ -1,3 +1,16 @@
+## [1.5.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.4.1...v1.5.0) (2023-10-19)
+
+
+### 🚀 New Features
+
+* enable service monitor for all sub components ([55709b1](https://github.com/AtomiCloud/sulfoxide.argon/commit/55709b13255f5850ff816c67b645321064e2ddf4))
+
+
+### 🐛 Bug Fixes
+
+* update kyverno ([d7d8ccf](https://github.com/AtomiCloud/sulfoxide.argon/commit/d7d8ccfa4f56463a577c6c176f1dc5def28d2009))
+* update kyverno ([1ec067a](https://github.com/AtomiCloud/sulfoxide.argon/commit/1ec067af66eebb22919f1948a6465434b9ae1c6b))
+
 ## [1.4.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.4.0...v1.4.1) (2023-10-15)
 
 
