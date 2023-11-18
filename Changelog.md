@@ -1,3 +1,15 @@
+## [1.6.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.5.0...v1.6.0) (2023-11-18)
+
+
+### 📦 Upstreams Changes
+
+* kyverno to 3.1.0 and report to 2.21.2 ([4aaddd6](https://github.com/AtomiCloud/sulfoxide.argon/commit/4aaddd6e4d1c89cad2d7422fd307e776a96e1957))
+
+
+### 🚀 New Features
+
+* ruby values ([f6787e9](https://github.com/AtomiCloud/sulfoxide.argon/commit/f6787e91d9c408e3d154eaf97df5bfd394d52619))
+
 ## [1.5.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.4.1...v1.5.0) (2023-10-19)
 
 
