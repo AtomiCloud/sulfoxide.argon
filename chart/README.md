@@ -1,6 +1,6 @@
 # sulfoxide-argon
 
-![Version: 1.5.0](https://img.shields.io/badge/Version-1.5.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
+![Version: 1.5.0](https://img.shields.io/badge/Version-1.5.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.1.0](https://img.shields.io/badge/AppVersion-3.1.0-informational?style=flat-square)
 
 Helm chart to deploy AtomiCloud's Cluster policy engine, Kyverno
 
@@ -8,8 +8,8 @@ Helm chart to deploy AtomiCloud's Cluster policy engine, Kyverno
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://kyverno.github.io/kyverno/ | kyverno | 3.0.5 |
-| https://kyverno.github.io/policy-reporter | policy-reporter | 2.20.1 |
+| https://kyverno.github.io/kyverno/ | kyverno | 3.1.0 |
+| https://kyverno.github.io/policy-reporter | policy-reporter | 2.21.2 |
 
 ## Values
 
