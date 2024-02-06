@@ -30,14 +30,6 @@ kyverno:
 
 # -- Kyverno Policy Reporter Configuration. See [Policy Reporter](https://github.com/kyverno/policy-reporter)
 policy-reporter:
-  topologySpreadConstraints:
-    - maxSkew: 1
-      topologyKey: "topology.kubernetes.io/zone"
-      whenUnsatisfiable: ScheduleAnyway
-      labelSelector:
-        matchLabels:
-          <<: *tags
-          atomi.cloud/module: reporter
   resources:
     limits:
       cpu: 1
