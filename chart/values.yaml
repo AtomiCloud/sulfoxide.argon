@@ -13,6 +13,14 @@ tags: &tags
 # -- Kyverno Configuration. See [Kyverno](https://github.com/kyverno/kyverno/tree/main/charts/kyverno)
 kyverno:
   backgroundController:
+    topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: "topology.kubernetes.io/zone"
+        whenUnsatisfiable: ScheduleAnyway
+        labelSelector:
+        matchLabels:
+            <<: *tags
+            atomi.cloud/module: background-controller
     replicas: 1
     serviceMonitor:
       enabled: true
@@ -31,6 +39,14 @@ kyverno:
       <<: *tags
       atomi.cloud/module: background-controller
   cleanupController:
+    topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: "topology.kubernetes.io/zone"
+        whenUnsatisfiable: ScheduleAnyway
+        labelSelector:
+        matchLabels:
+            <<: *tags
+            atomi.cloud/module: cleanup-controller
     replicas: 1
     serviceMonitor:
       enabled: true
@@ -49,6 +65,14 @@ kyverno:
       <<: *tags
       atomi.cloud/module: cleanup-controller
   admissionController:
+    topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: "topology.kubernetes.io/zone"
+        whenUnsatisfiable: ScheduleAnyway
+        labelSelector:
+        matchLabels:
+            <<: *tags
+            atomi.cloud/module: admission-controller
     createSelfSignedCert: true
     replicas: 1
     podLabels:
@@ -69,6 +93,14 @@ kyverno:
         cpu: 100m
         memory: 128Mi
   reportsController:
+    topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: "topology.kubernetes.io/zone"
+        whenUnsatisfiable: ScheduleAnyway
+        labelSelector:
+        matchLabels:
+            <<: *tags
+            atomi.cloud/module: reports-controller
     replicas: 1
     podLabels:
       <<: *tags
