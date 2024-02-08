@@ -1,3 +1,18 @@
+## [1.7.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.6.0...v1.7.0) (2024-02-08)
+
+
+### 🚀 New Features
+
+* onyx cluster ([4372623](https://github.com/AtomiCloud/sulfoxide.argon/commit/4372623e69b4db13999b829abb344eb9ddd93444))
+* topologySpreadConstraints ([12c5b5e](https://github.com/AtomiCloud/sulfoxide.argon/commit/12c5b5e25aa40e951a5ab1e4df594943be8325be))
+
+
+### 🐛 Bug Fixes
+
+* increase memory limit for admission-controller ([b83e039](https://github.com/AtomiCloud/sulfoxide.argon/commit/b83e039465622e410a3faf5d4719ef80bf8b68af))
+* releaser ([328af74](https://github.com/AtomiCloud/sulfoxide.argon/commit/328af7408613d083702eb60d264e4a91dcb63ff0))
+* remove topologySpreadConstraints from landscape values ([a88b8cc](https://github.com/AtomiCloud/sulfoxide.argon/commit/a88b8cca38a69619adbfdce4cab4a05261ff503b))
+
 ## [1.6.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.5.0...v1.6.0) (2023-11-18)
 
 
