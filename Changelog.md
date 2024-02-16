@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.7.0...v1.7.1) (2024-02-16)
+
+
+### 🐛 Bug Fixes
+
+* incorrect topologySpreadConstraints ([ab634d3](https://github.com/AtomiCloud/sulfoxide.argon/commit/ab634d3689e12ce6cce52763b107767621827a70))
+
 ## [1.7.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.6.0...v1.7.0) (2024-02-08)
 
 
