@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.8.0...v1.8.1) (2024-03-23)
+
+
+### 🐛 Bug Fixes
+
+* incorrect indentation for container ([e6e44fd](https://github.com/AtomiCloud/sulfoxide.argon/commit/e6e44fde49f68bc3e12722ece089bf807916bcdb))
+
 ## [1.8.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.7.1...v1.8.0) (2024-03-14)
 
 
