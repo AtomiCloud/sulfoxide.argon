@@ -87,14 +87,14 @@ kyverno:
     serviceMonitor:
       enabled: true
       interval: 60s
-  container:
-    resources:
-      limits:
-        memory: 512Mi
-        cpu: 250m
-      requests:
-        cpu: 100m
-        memory: 128Mi
+    container:
+      resources:
+        limits:
+          memory: 512Mi
+          cpu: 250m
+        requests:
+          cpu: 100m
+          memory: 128Mi
   reportsController:
     topologySpreadConstraints:
       - maxSkew: 1
