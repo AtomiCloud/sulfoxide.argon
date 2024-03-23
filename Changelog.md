@@ -1,3 +1,11 @@
+## [1.9.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.8.1...v1.9.0) (2024-03-23)
+
+
+### 🚀 New Features
+
+* increase kyverno request, limits and replicas ([4bc7498](https://github.com/AtomiCloud/sulfoxide.argon/commit/4bc7498045a162e1abe88d6b5ce06de559c968c3))
+* increase kyverno request, limits and replicas ([29a90d9](https://github.com/AtomiCloud/sulfoxide.argon/commit/29a90d9a037ad6625a0af3cc43779d83e08423f9))
+
 ## [1.8.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.8.0...v1.8.1) (2024-03-23)
 
 
