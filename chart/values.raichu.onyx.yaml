@@ -13,14 +13,14 @@ kyverno:
     podLabels:
       <<: *tags
   admissionController:
-    replicas: 2
+    replicas: 3
     container:
       resources:
         limits:
           memory: 512Mi
           cpu: 500m
         requests:
-          cpu: 250m
+          cpu: 125m
           memory: 128Mi
     podLabels:
       <<: *tags
