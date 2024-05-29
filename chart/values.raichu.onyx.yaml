@@ -17,11 +17,11 @@ kyverno:
     container:
       resources:
         limits:
+          cpu: 1
+          memory: 1Gi
+        requests:
           memory: 512Mi
           cpu: 500m
-        requests:
-          cpu: 125m
-          memory: 128Mi
     podLabels:
       <<: *tags
     podAnnotations:
