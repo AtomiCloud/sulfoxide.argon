@@ -1,3 +1,15 @@
+## [1.10.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.9.0...v1.10.0) (2024-08-11)
+
+
+### 📦 Upstreams Changes
+
+* upgrade nix, helm upstream, GHA ([e1ed61d](https://github.com/AtomiCloud/sulfoxide.argon/commit/e1ed61dfa78a150fc1290624b2f857b9495d824b))
+
+
+### 🚀 New Features
+
+* increase argon req/lim ([d1af9de](https://github.com/AtomiCloud/sulfoxide.argon/commit/d1af9deed23108e4d7c67ae033babf941dcc3e14))
+
 ## [1.9.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.8.1...v1.9.0) (2024-03-23)
 
 

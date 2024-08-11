@@ -2,7 +2,7 @@ apiVersion: v2
 name: sulfoxide-argon
 description: Helm chart to deploy AtomiCloud's Cluster policy engine, Kyverno
 type: application
-version: 1.9.0
+version: 1.10.0
 appVersion: "3.2.6"
 dependencies:
   - name: kyverno
