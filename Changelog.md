@@ -1,3 +1,10 @@
+## [1.11.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.10.0...v1.11.0) (2024-08-11)
+
+
+### 🚀 New Features
+
+* amber values file ([391934e](https://github.com/AtomiCloud/sulfoxide.argon/commit/391934e03b2dcd0b4a59211d031e80e238c92f5d))
+
 ## [1.10.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.9.0...v1.10.0) (2024-08-11)
 
 
