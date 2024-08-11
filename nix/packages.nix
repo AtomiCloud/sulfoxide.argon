@@ -1,4 +1,4 @@
-{ pkgs, atomi, pkgs-sep-24-23 }:
+{ pkgs, atomi, pkgs-240810 }:
 let
 
   all = {
@@ -6,16 +6,16 @@ let
       with atomi;
       {
         inherit
-          infisical
           pls
           sg;
       }
     );
-    sep-24-23 = (
-      with pkgs-sep-24-23;
+    pkgs240810 = (
+      with pkgs-240810;
       {
         inherit
           coreutils
+          infisical
           sd
           bash
           git
@@ -40,4 +40,4 @@ let
 in
 with all;
 atomipkgs //
-sep-24-23
+pkgs240810

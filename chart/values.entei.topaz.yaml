@@ -1,6 +1,6 @@
 serviceTree:
   landscape: &landscape entei
-  cluster: &cluster opal
+  cluster: &cluster topaz
 
 tags: &tags
   atomi.cloud/landscape: *landscape

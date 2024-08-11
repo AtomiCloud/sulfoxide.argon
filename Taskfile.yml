@@ -10,6 +10,12 @@ includes:
     vars:
       LANDSCAPE: pichu
       CLUSTER: opal
+  entei:topaz:
+    taskfile: tasks/Taskfile.cluster.yaml
+    vars:
+      LANDSCAPE: entei
+      CLUSTER: topaz
+
 
 tasks:
   # Utility
