@@ -1,3 +1,11 @@
+## [1.13.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.12.0...v1.13.0) (2024-08-28)
+
+
+### 🚀 New Features
+
+* configure opal-ruby for infisical ([58ae2fb](https://github.com/AtomiCloud/sulfoxide.argon/commit/58ae2fb6a40487a8815bff99e14c45d8d99fc913))
+* values for mica & talc ([0697ab6](https://github.com/AtomiCloud/sulfoxide.argon/commit/0697ab6ba187961759fe69888aba44883142613a))
+
 ## [1.12.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.11.0...v1.12.0) (2024-08-11)
 
 
