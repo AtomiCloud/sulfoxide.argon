@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 
 env:
   RELEASE_NAME: sulfoxide-argon
@@ -15,7 +15,6 @@ includes:
     vars:
       LANDSCAPE: entei
       CLUSTER: topaz
-
 
 tasks:
   # Utility
