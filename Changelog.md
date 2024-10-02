@@ -1,3 +1,10 @@
+## [1.14.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.13.0...v1.14.0) (2024-10-02)
+
+
+### 📦 Upstreams Changes
+
+* **atominix:** update to 28.0.0 ([ea4e068](https://github.com/AtomiCloud/sulfoxide.argon/commit/ea4e06895ebcd0f0e9c10e69040a888e648a8a0a))
+
 ## [1.13.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.12.0...v1.13.0) (2024-08-28)
 
 
