@@ -133,6 +133,81 @@ kyverno:
                 - kube-node-lease
                 - kube-public
                 - kyverno
+  webhooksCleanup:
+    podLabels:
+      <<: *tags
+      atomi.cloud/module: webhooks-cleanup
+    podAnnotations:
+      <<: *tags
+      atomi.cloud/module: webhooks-cleanup
+      drop_log: "true"
+    image:
+      repository: bitnamilegacy/kubectl
+  policyReportsCleanup:
+    podLabels:
+      <<: *tags
+      atomi.cloud/module: policy-reports-cleanup
+    podAnnotations:
+      <<: *tags
+      atomi.cloud/module: policy-reports-cleanup
+      drop_log: "true"
+    image:
+      repository: bitnamilegacy/kubectl
+  cleanupJobs:
+    admissionReports:
+      podLabels:
+        <<: *tags
+        atomi.cloud/module: clean-up-admission-reports
+      podAnnotations:
+        <<: *tags
+        atomi.cloud/module: clean-up-admission-reports
+        drop_log: "true"
+      image:
+        repository: bitnamilegacy/kubectl
+    clusterAdmissionReports:
+      podLabels:
+        <<: *tags
+        atomi.cloud/module: clean-up-cluster-admission-reports
+      podAnnotations:
+        <<: *tags
+        atomi.cloud/module: clean-up-cluster-admission-reports
+        drop_log: "true"
+      image:
+        repository: bitnamilegacy/kubectl
+    updateRequests:
+      podLabels:
+        <<: *tags
+        atomi.cloud/module: clean-up-update-requests
+      podAnnotations:
+        <<: *tags
+        atomi.cloud/module: clean-up-update-requests
+        drop_log: "true"
+      image:
+        repository: bitnamilegacy/kubectl
+    ephemeralReports:
+      podLabels:
+        <<: *tags
+        atomi.cloud/module: clean-up-ephemeral-reports
+      podAnnotations:
+        <<: *tags
+        atomi.cloud/module: clean-up-ephemeral-reports
+        drop_log: "true"
+      image:
+        repository: bitnamilegacy/kubectl
+    clusterEphemeralReports:
+      podLabels:
+        <<: *tags
+        atomi.cloud/module: clean-up-cluster-ephemeral-reports
+      podAnnotations:
+        <<: *tags
+        atomi.cloud/module: clean-up-cluster-ephemeral-reports
+        drop_log: "true"
+      image:
+        repository: bitnamilegacy/kubectl
+
+
+
+
 # -- Kyverno Policy Reporter Configuration. See [Policy Reporter](https://github.com/kyverno/policy-reporter)
 policy-reporter:
   topologySpreadConstraints:
