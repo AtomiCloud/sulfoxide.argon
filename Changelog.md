@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.14.0...v1.14.1) (2025-11-03)
+
+
+### 🐛 Bug Fixes
+
+* move bitnami to bitnamilegacy ([3cdd335](https://github.com/AtomiCloud/sulfoxide.argon/commit/3cdd335252f73cf4be4c7917c20f65bf12409063))
+
 ## [1.14.0](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.13.0...v1.14.0) (2024-10-02)
 
 
