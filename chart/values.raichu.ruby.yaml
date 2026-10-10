@@ -17,6 +17,18 @@ kyverno:
       <<: *tags
     podAnnotations:
       <<: *tags
+    # The chart default (250m limit) throttles the admission controller on the
+    # busy raichu cluster until its 5s liveness probe times out; it then
+    # crash-loops, and because the webhook fails closed no pod can be created
+    # cluster-wide (2026-10-10: tin could not start any helium-pollee jobs).
+    container:
+      resources:
+        limits:
+          memory: 512Mi
+          cpu: 1
+        requests:
+          cpu: 250m
+          memory: 256Mi
   cleanupController:
     podAnnotations:
       <<: *tags
