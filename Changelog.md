@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.14.1...v1.14.2) (2026-10-10)
+
+
+### 🐛 Bug Fixes
+
+* **raichu:** give the kyverno admission controller enough CPU to pass its liveness probe ([#8](https://github.com/AtomiCloud/sulfoxide.argon/issues/8)) ([e3b0bb6](https://github.com/AtomiCloud/sulfoxide.argon/commit/e3b0bb65567881f79075c70545a83aa8dcbd5e53))
+
 ## [1.14.1](https://github.com/AtomiCloud/sulfoxide.argon/compare/v1.14.0...v1.14.1) (2025-11-03)
 
 
